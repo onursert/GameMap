@@ -146,16 +146,16 @@
         }
 
         network.on('click', function(properties) {
-            var nodeGameId = properties.nodes[0];
-            if (nodeGameId != undefined) {
-                window.open("https://store.steampowered.com/app/" + nodeGameId);
+            var nodeId = properties.nodes[0];
+            if (nodeId != undefined) {
+                window.open("https://store.steampowered.com/app/" + nodeId);
             }
         });
 
         network.on("oncontext", function(properties) {
-            var nodeGameId = properties.nodes[0];
-            if (nodeGameId != undefined) {
-                window.open("graph.php?id=" + nodes.get(properties.nodes[0])["id"] + "&name=" + nodes.get(properties.nodes[0])["label"]);
+            var nodeId = properties.nodes[0];
+            if (nodeId != undefined) {
+                window.open("graph.php?id=" + nodeId + "&name=" + nodes.get(nodeId)["label"]);
             }
             return false;
         });
