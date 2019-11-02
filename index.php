@@ -86,14 +86,15 @@
         }
         for (var key in gdata) {
             if (containsOrStartsWith(gdata[key].name, document.getElementById("gameName").value)) {
-                var node = document.createElement("li");
+                var listItem = document.createElement("li");
+
                 var a = document.createElement('a');
-                var linkText = document.createTextNode(gdata[key].name + ", " + gdata[key].appid);
-                a.appendChild(linkText);
                 a.className = "dropdown-item";
+                a.innerHTML = gdata[key].name + ", " + gdata[key].appid;
                 a.href = "graph.php?id=" + gdata[key].appid + "&name=" + gdata[key].name;
-                node.appendChild(a);
-                document.getElementById("dropdownSuggestion").appendChild(node);
+                
+                listItem.appendChild(a);
+                document.getElementById("dropdownSuggestion").appendChild(listItem);
                 count++;
             }
             if (count > 7) {
