@@ -1,6 +1,7 @@
 # GameMap
 GameMap - Find Similar Games on Steam (with Vis.js and steamspy.com) - 2019 (PHP - JavaScript)<br>
 <a href="https://gamemap.onursert.org/">GameMap</a>
+
 <ul>
   <li>It gets all games' infos on Steam via SteamSpy while "Getting All Games..." is on the screen.</li>
   <li>When you type a game name to input, it finds games which similar to that name. Found games' name either contains or starts with game name you type.</li>
